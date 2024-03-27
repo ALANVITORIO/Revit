@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 3.875rem;
+  line-height: 4.0625rem;
+  letter-spacing: -0.0825rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.5rem;
+  letter-spacing: -0.125rem;
+}
+
+.text-blue {
+  color: #4460d7;
+}
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  color: black; /* Certifique-se de que o texto será visível sobre a imagem de fundo */
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('hero.webp'); /* Caminho da imagem de fundo */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative; /* Garante que o conteúdo da .container fique acima do fundo */
+}
+
+.hero-section p.tagline {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  padding: 0.825rem 1.25rem;
+  border: 1px solid #4460d7;
+  border-radius: 25px;
+  display: inline-block;
+  color: #4460d7;
+  background-color: #f5f7fa;
+  line-height: 0.8;
+  letter-spacing: 0.1rem;
+}
+
+.hero-section .btn-primary {
+  background-color: #0244b9;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+  background-color: #0350e9;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+.hero-section .btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0244b9;
+}
+
+@media (max-width: 767px) {
+  .hero-section::after {
+    display: none;
+  }
+
+  .hero-section {
+    padding: 20px 0;
+  }
+
+  .hero-section p.tagline {
+    margin-bottom: 0.825rem;
+    padding: 0.4125rem 0.625rem;
+    font-size: 0.55rem;
+    line-height: 0.75rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.35rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .image-container {
+    margin-bottom: 25px;
+  }
+
+  .hero-mobile-image {
+    width: 220%;
+    max-width: 220%;
+    height: auto;
+    position: relative;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+
+  .hero-section .btn-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.content-section {
+  background-image: url('hero.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+.custom-button {
+  background-color: #000214;
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 20px;
+}
